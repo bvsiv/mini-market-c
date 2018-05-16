@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_09_171451) do
+ActiveRecord::Schema.define(version: 2018_05_15_120737) do
 
-  create_table "offers", force: :cascade do |t|
-    t.decimal "suggested_price"
+  create_table "products", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "status", default: "proposed"
+    t.text "description"
+    t.integer "merchant_id"
+    t.index ["merchant_id"], name: "index_products_on_merchant_id"
   end
 
 end

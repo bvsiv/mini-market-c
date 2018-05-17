@@ -1,6 +1,6 @@
 class Merchant < ApplicationRecord
-	validates :name, presence: true
-	validates :email, presence: true
+  validates :name, presence: true
+  validates :email, presence: true
 
-	has_many :offers
+  has_many :offers
 end

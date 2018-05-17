@@ -16,7 +16,7 @@ end
 
 private
   def customer_params
-    params.require(:customer).permit(:name, :email, :password_digest)
+    params.require(:customer).permit(:name, :email, :password)
   end
 
 end

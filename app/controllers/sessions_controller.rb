@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 
   def create
     @customer = Customer.find_by_email(params[:session][:email])
-      if @customer && @customer.authenticate(params[:session][:password_digest])
+      if @customer && @customer.authenticate(params[:session][:password])
         session[:customer_id] = @customer.id
         redirect_to '/'
       else

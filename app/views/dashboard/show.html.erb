@@ -1,2 +1,8 @@
-<h1>Dashboard#show</h1>
-<p>Find me in app/views/dashboard/show.html.erb</p>
+<h1>Your Mini-Market-C Dashboard</h1>
+<p>Welcome to Mini-Market-C!</p>
+
+<% if flash[:success] %>
+  <div class='alert alert-success'><%= flash[:success] %></div>
+<% end %>
+
+<%= link_to 'Click here to log out.', logout_path %>

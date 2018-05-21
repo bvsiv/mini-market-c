@@ -5,7 +5,7 @@
 <div class='alert alert-danger'><%= flash[:error] %></div>
 <% end %>
 
-<%= form_for :session, url: sessions_path do |f| %>
+<%= form_for :session, url: merchants_sessions_path do |f| %>
   <div class='form-group'>
     <%= f.label :email %>
     <%= f.email_field :email, class: 'form-control', placeholder: 'Email' %>
@@ -20,5 +20,5 @@
 <% end %>
 
 <p class='mt-2'>
-  New Merchant? <%= link_to 'Click here to create an account.', new_merchant_path %>
+  New Merchant? <%= link_to 'Click here to create an account.', new_merchants_merchant_path %>
 </p>

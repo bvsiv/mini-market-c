@@ -3,4 +3,6 @@ class Customer < ApplicationRecord
   validates :email, presence: true, format: /\A.+@.+\..+\z/, uniqueness: true
 
   has_many :offers
+
+  has_secure_password 
 end

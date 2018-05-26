@@ -9,10 +9,15 @@ module Customers
       @customer = Customer.new(customer_params) 
       if @customer.save 
         session[:customer_id] = @customer.id 
-        redirect_to '/' 
+        redirect_to customers_path (@customer.id)
      else 
-        redirect_to '/signup' 
+        redirect_to customers_signup_path 
       end 
+    end
+
+    def show 
+      @customer = Customer.find(params[:customer_id]) 
+      @offers = @customer.offers
     end  
 
     private

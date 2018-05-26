@@ -1,0 +1,9 @@
+<h2> Welcome <%=@customer.name %>. You're on your Customer panel</h2>
+<h3> Here you can see your offers:</h3>
+
+<% @offers.each do |o| %>
+        <h4>Status: <%= o.status %></h4>
+        <p>Modified: <%= o.updated_at %></p>
+        <p>Realized by: <%= o.merchant_id %></p>
+        <p><%= link_to "See details", offer_path(o) %></p>
+      <% end %>

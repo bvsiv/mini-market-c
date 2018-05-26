@@ -22,7 +22,7 @@ module Customers
 
     private
     def customer_params
-      params.require(:customer).permit(:name, :email, :password)
+      params.require(:customer).permit(:name, :email, :password, :password_confirmation)
     end
   end
 end

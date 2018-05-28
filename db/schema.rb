@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_18_170911) do
+ActiveRecord::Schema.define(version: 2018_05_26_230500) do
 
   create_table "customers", force: :cascade do |t|
     t.string "name"
@@ -34,9 +34,9 @@ ActiveRecord::Schema.define(version: 2018_05_18_170911) do
     t.datetime "updated_at", null: false
     t.string "status", default: "proposed"
     t.integer "customer_id"
-    t.integer "merchant_id"
+    t.integer "product_id"
     t.index ["customer_id"], name: "index_offers_on_customer_id"
-    t.index ["merchant_id"], name: "index_offers_on_merchant_id"
+    t.index ["product_id"], name: "index_offers_on_product_id"
   end
 
   create_table "products", force: :cascade do |t|

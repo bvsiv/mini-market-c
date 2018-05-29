@@ -4,6 +4,4 @@
 <% @offers.each do |o| %>
         <h4>Status: <%= o.status %></h4>
         <p>Modified: <%= o.updated_at %></p>
-        <p>Realized by: <%= o.merchant_id %></p>
-        <p><%= link_to "See details", offer_path(o) %></p>
       <% end %>

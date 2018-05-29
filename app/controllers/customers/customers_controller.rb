@@ -18,6 +18,7 @@ module Customers
     def show 
       @customer = Customer.find(params[:customer_id]) 
       @offers = @customer.offers
+      @products = @customer.products
     end  
 
     private

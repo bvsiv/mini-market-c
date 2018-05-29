@@ -5,7 +5,7 @@ class OffersController < ApplicationController
   end
 
   private 
-  def destination_params 
+  def offer_params 
     params.require(:offer).permit(:status, :suggested_price) 
   end
 

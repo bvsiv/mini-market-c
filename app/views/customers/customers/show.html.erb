@@ -1,16 +1,14 @@
 <h2> Welcome <%=@customer.name %>. You're on your Customer panel</h2>
 <h3> Here you can see your offers:</h3>
 
-
     <% @offers.each do |o| %>
-    <% @products.each do |p| %>
-    <h4>Product: <%= p.name %></h4>
-    <% end %>
+    <h4>Product: <%= o.product.name %></h4>
     <p>Status: <%= o.status %></p>
     <p>Modified: <%= o.updated_at %></p>
     <p>Price: <%= o.suggested_price %></p><br>
     <br>
     <% end %>
+
  
 
   

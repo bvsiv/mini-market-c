@@ -37,11 +37,19 @@ img.d-inline-block.align-top {
   border-color: #45C4C9;
 }
 
+.btn.details {
+  font-size: 1.3rem;
+  padding: .3rem .6rem;
+}
+
+.btn.details:hover {
+background: #45C4C9;
+border-color: #45C4C9;   
+}
 
 body, html {
   height: 100%;
   background: #FCF1EE;
-    
 }
 
 .nav item {

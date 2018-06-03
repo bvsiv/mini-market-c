@@ -12,7 +12,7 @@ opacity: 0.8;
 }
 
 .navbar-light .navbar-brand {
-font-size: 3rem;
+font-size: 3.2rem;
 color: #087E8B;
 }
 
@@ -38,7 +38,7 @@ img.d-inline-block.align-top {
 }
 
 .btn.details {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   padding: .3rem .6rem;
 }
 
@@ -48,6 +48,7 @@ border-color: #45C4C9;
 }
 
 body, html {
+  font-family: 'Calibri', serif;
   height: 100%;
   background: #FCF1EE;
 }
@@ -66,25 +67,25 @@ div.row.bg-title{
 
 h4.page-title {
   font-weight: bold;
-  font-size: 3.5em;
+  font-size: 3.8em;
   color:#087E8B;
 }
 
 h3.page-title {
-  font-size: 2.9em;
+  font-size: 3.1em;
   color:#087E8B;
   padding:2px;
 }
 
 h3.box-title {
-  font-size: 2.5em;
+  font-size: 2.7em;
   color:#264653;
   padding:2px;
 }
 
 .table {
   margin-top: 15px;
-  font-size: 2em;
+  font-size: 2.3em;
   color:#264653;
 }
 
@@ -143,7 +144,7 @@ a, a:hover, a:focus {
 
 #sidebar ul li a {
   padding: 10px;
-  font-size: 1.6em;
+  font-size: 2em;
   display: block;
 }
 #sidebar ul li a:hover {
@@ -164,6 +165,6 @@ ul ul a {
 
 footer {
   color:#EFF8E2;
-  font-size: 1.5em;
+  font-size: 1.6em;
   background: #087E8B
 }

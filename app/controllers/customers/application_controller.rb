@@ -8,7 +8,7 @@ module Customers
     end
 
     def require_customer 
-      redirect_to '/login' unless current_customer
+      redirect_to customers_login_path unless current_customer
     end
   end
 end

@@ -1,6 +1,7 @@
 module Customers
   class CustomersController < ApplicationController
-    
+  before_action :require_customer, only: [:show]
+
     def new
       @customer = Customer.new
     end

@@ -16,12 +16,6 @@ module Customers
       end 
     end
 
-    def show 
-      @customer = Customer.find(params[:customer_id]) 
-      @offers = @customer.offers
-      @products = @customer.products
-    end  
-
     private
     def customer_params
       params.require(:customer).permit(:name, :email, :password, :password_confirmation)

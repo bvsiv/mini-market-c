@@ -1,12 +1,9 @@
 module Merchants
   class SessionsController < ApplicationController
-    skip_before_action :require_valid_merchant!, except: [:destroy]
-
     def new
     end
 
     def create
-      reset_session
       @merchant = Merchant.find_by(email: session_params[:email])
 
       if @merchant && @merchant.authenticate(session_params[:password])
@@ -20,7 +17,8 @@ module Merchants
     end
 
     def destroy
-      reset_session
+      session[:merchant_id] = nil
+      redirect_to root_path
     end
 
     def session_params

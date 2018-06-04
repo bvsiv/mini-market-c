@@ -12,7 +12,7 @@
   </div>
 <% end %>
 
-<%= form_for @merchant do |f| %>
+<%= form_for [:merchants, @merchant] do |f| %>
   <div class='form-group'>
     <%= f.label :name %>
     <%= f.text_field :name, class: 'form-control' %>
@@ -33,5 +33,5 @@
 <% end %>
 
 <p class='mt-2'>
-  Already have an account? <%= link_to 'Click here to sign in.', login_path %>
+  Already have an account? <%= link_to 'Click here to sign in.', merchants_login_path %>
 </p>

@@ -1,0 +1,16 @@
+  <h1>Mini Market</h1>
+
+<% if flash[:success] %>
+  <div class='alert alert-success'><%= flash[:success] %></div>
+<% end %>
+
+<div class="login">
+  <% if current_merchant %>
+    <%= link_to 'Logout', merchants_logout_path %>
+  <% elsif current_customer %>
+    <%= link_to 'Logout', customers_logout_path %>
+  <% else %>
+    <%= link_to 'Merchant login', merchants_login_path %>
+    <%= link_to 'Customer login', customers_login_path %>
+  <% end %>
+</div>

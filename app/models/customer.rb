@@ -5,5 +5,5 @@ class Customer < ApplicationRecord
   has_many :offers
   has_many :products, through: :offers
 
-  has_secure_password 
+  has_secure_password
 end

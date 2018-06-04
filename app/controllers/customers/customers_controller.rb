@@ -10,7 +10,7 @@ module Customers
       @customer = Customer.new(customer_params) 
       if @customer.save 
         session[:customer_id] = @customer.id 
-        redirect_to customers_path (@customer.id)
+        redirect_to customers_panel_path (@customer.id)
      else 
         redirect_to customers_signup_path 
       end 

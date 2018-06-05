@@ -1,6 +1,7 @@
 module Customers
   class CustomersController < ApplicationController
-    
+  before_action :require_customer, only: [:show]
+
     def new
       @customer = Customer.new
     end
@@ -9,15 +10,15 @@ module Customers
       @customer = Customer.new(customer_params) 
       if @customer.save 
         session[:customer_id] = @customer.id 
-        redirect_to '/' 
+        redirect_to customers_panel_path(@customer.id)
      else 
-        redirect_to '/signup' 
+        redirect_to customers_signup_path 
       end 
-    end  
+    end
 
     private
     def customer_params
-      params.require(:customer).permit(:name, :email, :password)
+      params.require(:customer).permit(:name, :email, :password, :password_confirmation)
     end
   end
 end

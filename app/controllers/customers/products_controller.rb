@@ -4,6 +4,7 @@ module Customers
 
     def index
       @products=Product.all
+      @customer = current_customer
     end
 
   end

@@ -17,74 +17,74 @@
     </div>
 
     <div id="container">
-    <div id="navbar">
-      <nav class="navbar fixed-top navbar-light">
-        <a class="navbar-brand" href="/">
-          <%=image_tag("minilogo3.png", size:45, class: "d-inline-block align-top", alt: "ooł") %> Mini Market</a>
-            <ul class="nav navbar-top-links navbar-right pull-right">
-              <li>
-                <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> <a href=<%=customers_logout_path %> target="_blank" class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Log out</a>
-              </li>
-            </ul>
-      </nav>
-    </div>
+      <div id="navbar">
+        <nav class="navbar fixed-top navbar-light">
+          <a class="navbar-brand" href="/">
+            <%=image_tag("minilogo3.png", size:45, class: "d-inline-block align-top", alt: "ooł") %> Mini Market</a>
+              <ul class="nav navbar-top-links navbar-right pull-right">
+                <li>
+                  <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> <a href=<%=customers_logout_path %> target="_blank" class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Log out</a>
+                </li>
+              </ul>
+        </nav>
+      </div>
 
-    <div class="wrapper">
-      <nav id="sidebar">
-        <ul class="list-unstyled components">
-          <li><a href="/">Dashboard</a></li>
-          <li class="active"><a href= <%=customers_panel_path %> >Customer's Panel</a></li>
-          <li><a href=<%=customers_products_path %> >Products</a></li>
-        </ul>
-      </nav>
+      <div class="wrapper">
+        <nav id="sidebar">
+          <ul class="list-unstyled components">
+            <li><a href="/">Dashboard</a></li>
+            <li class="active"><a href= <%=customers_panel_path %> >Customer's Panel</a></li>
+            <li><a href=<%=customers_products_path %> >Products</a></li>
+          </ul>
+        </nav>
 
-      <div id="page-wrapper">
-        <div class="container-fluid">
-          <div class="row bg-title">
-            <div class="col-12">
-              <h4 class="page-title">Welcome <%=@customer.name %>!</h4>
-              <h3 class="page-title">You're on your Customer panel</h3></div>
+        <div id="page-wrapper">
+          <div class="container-fluid">
+            <div class="row bg-title">
+              <div class="col-12">
+                <h4 class="page-title">Welcome <%=@customer.name %>!</h4>
+                <h3 class="page-title">You're on your Customer panel</h3></div>
+              </div>
             </div>
-          </div>
 
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="white-box">
-              <h3 class="box-title">Here you can see your offers</h3>
-                <div class="table-responsive">
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th>Product</th>
-                        <th>Merchant</th>
-                        <th>Status</th>
-                        <th>Modified</th>
-                        <th>Price</th>
-                        <th>Details</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                    <% @offers.each do |o| %>
-                      <tr>
-                        <td><%= o.product.name %></td>
-                        <td><%= o.product.merchant.name %></td>
-                        <td><%= o.status %></td>
-                        <td><%= o.updated_at.strftime("%d.%m.%Y %H:%M:%S") %></td>
-                        <td><%= number_to_currency(o.suggested_price, unit:"zł", separator: ",", delimiter: " ", format: "%n %u") %></td>
-                        <td><a href="#" target="_blank" class="btn details btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">See more</a></td>
-                      </tr>
-                    <% end %>
-                    </tbody>
-                  </table>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="white-box">
+                <h3 class="box-title">Here you can see your offers</h3>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Product</th>
+                          <th>Merchant</th>
+                          <th>Status</th>
+                          <th>Modified</th>
+                          <th>Price</th>
+                          <th>Details</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      <% @offers.each do |o| %>
+                        <tr>
+                          <td><%= o.product.name %></td>
+                          <td><%= o.product.merchant.name %></td>
+                          <td><%= o.status %></td>
+                          <td><%= o.updated_at.strftime("%d.%m.%Y %H:%M:%S") %></td>
+                          <td><%= number_to_currency(o.suggested_price, unit:"zł", separator: ",", delimiter: " ", format: "%n %u") %></td>
+                          <td><a href="#" target="_blank" class="btn details btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">See more</a></td>
+                        </tr>
+                      <% end %>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-   <footer class="footer text-center"> 2018 &copy; made by Mini Market Team C </footer>
-  </div>
+     <footer class="footer text-center"> 2018 &copy; made by Mini Market Team C </footer>
+
+    </div>
   </body>
-
 </html>

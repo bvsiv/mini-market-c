@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
-
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -10,42 +9,40 @@
     <%= stylesheet_link_tag('bootstrap-grid')%>
     <%= stylesheet_link_tag('login_customer')%>
     <title>Mini Market</title>
-
-</head>
-<body>
-<div class="container main-section">
-  <div class="row">
-    <div class="col-md-12 text-center user-login-header">
-      <h1>Log in</h1>
-      <p>to <span>Mini Market </span>as <span> Customer</span></p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4 col-sm-8 col-xs-12 col-md-offset-4 col-sm-offset-2 login-image-main text-center">
+  </head>
+  <body>
+    <div class="container main-section">
       <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12 user-image-section">
-          <%=image_tag("minilogo3.png", size:45, class: "d-inline-block align-top", alt: "ooł") %>
+        <div class="col-md-12 text-center user-login-header">
+          <h1>Log in</h1>
+          <p>to <span>Mini Market </span>as <span> Customer</span></p>
         </div>
-        <div class="col-md-12 col-sm-12 col-xs-12 user-login-box">
-          <%= form_for(:session, url: customers_login_path) do |f| %>
-          <div class="form-group">
-              <%= f.email_field :email, :placeholder => "Email", class: "form-control" %>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-sm-8 col-xs-12 col-md-offset-4 col-sm-offset-2 login-image-main text-center">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 user-image-section">
+              <%=image_tag("minilogo3.png", size:45, class: "d-inline-block align-top", alt: "ooł") %>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 user-login-box">
+              <%= form_for(:session, url: customers_login_path) do |f| %>
+              <div class="form-group">
+                  <%= f.email_field :email, :placeholder => "Email", class: "form-control" %>
+              </div>
+              <div class="form-group">
+                <%= f.password_field :password, :placeholder => "Password", class: "form-control" %>
+              </div>
+              <%= f.submit "Log in", class: "btn btn-defualt" %>
+              </div>
+            <% end %>
+            <div class="col-md-12 col-sm-12 col-xs-12 last-part">
+              <p>Not registered?<a href=<%=customers_signup_path %>> <span>Create an account</span></a></p>
+              <p>or go to <a href= "/"><span>Dashboard</span></a></p>
+            </div>
           </div>
-          <div class="form-group">
-            <%= f.password_field :password, :placeholder => "Password", class: "form-control" %>
-          </div>
-          <%= f.submit "Log in", class: "btn btn-defualt" %>
-          </div>
-        <% end %>
-        <div class="col-md-12 col-sm-12 col-xs-12 last-part">
-          <p>Not registered?<a href=<%=customers_signup_path %>> <span>Create an account</span></a></p>
-          <p>or go to <a href= "/"><span>Dashboard</span></a></p>
         </div>
       </div>
     </div>
-  </div>
-
-</div>
-</body>
+  </body>
 </html>
 

@@ -12,7 +12,7 @@ module Merchants
       if @merchant && @merchant.authenticate(session_params[:password])
         session[:merchant_id] = @merchant.id
         flash[:success] = 'Welcome back!'
-        redirect_to root_path
+        redirect_to merchants_root_path
       else
         flash[:error] = 'Invalid email/password combination'
         redirect_to login_path

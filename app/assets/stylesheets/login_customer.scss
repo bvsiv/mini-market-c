@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Calibri');
+
+body, html {
+  font-family: 'Calibri', serif;
+  }
+
+.main-section{
+  background-color: #45C4C9;
+  background-size:100% 100%;
+  height: -webkit-fill-available;
+  margin: 0px;
+  width: 100%;
+}
+.user-login-header,.login-image-main{
+    margin-top: 15px;
+}
+.user-login-header h1{
+  font-size: 60px;
+  color:#EFF8E2;
+}
+.user-login-header p,.last-part p{
+  color:#087E8B;
+  font-size: 20px
+}
+.user-login-header span{
+  font-weight: 600;
+  font-size: 30px;
+}
+.login-image-main{
+  padding: 30px;
+  background-color:#FCF1EE;
+  border-radius:5px;
+  box-shadow: 0 0 5px 0 #fff;
+}
+.user-image-section img{
+  background-color: #087E8B;
+  padding:30px;
+  height:150px;
+  width:150px;
+  border-radius: 50%;
+}
+.user-login-box,.last-part{
+  padding:20px;
+}
+.user-login-box a,.user-login-box a:hover{
+  background-color: #087E8B;
+  border:1px solid #45C4C9;
+  width: 100%;
+  color:#fff;
+  font-weight:600;
+}
+.last-part a{
+  text-decoration: none;
+  color:#087E8B;
+}
+
+.last-part a span{
+font-weight:bold;
+}
+
+.last-part a span:hover{
+color:#45C4C9
+}
+
+.btn{
+  color: #EFF8E2;
+  background-color: #087E8B;
+  border-color: #087E8B;
+  font-size: 2rem;
+  padding: .3rem .6rem;
+}
+
+.btn:hover{
+  color: #EFF8E2;
+  background-color: #45C4C9;
+  border-color: #45C4C9;
+}

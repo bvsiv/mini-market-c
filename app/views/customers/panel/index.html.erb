@@ -69,7 +69,7 @@
                         <td><%= o.product.name %></td>
                         <td><%= o.product.merchant.name %></td>
                         <td><%= o.status %></td>
-                        <td><%= o.updated_at %></td>
+                        <td><%= o.updated_at.strftime("%d.%m.%Y %H:%M:%S") %></td>
                         <td><%= number_to_currency(o.suggested_price, unit:"zł", separator: ",", delimiter: " ", format: "%n %u") %></td>
                         <td><a href="#" target="_blank" class="btn details btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">See more</a></td>
                       </tr>

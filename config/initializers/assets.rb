@@ -7,7 +7,7 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.paths << Emoji.images_path
 # Add Yarn node_modules folder to the asset load path.
 Rails.application.config.assets.paths << Rails.root.join('node_modules')
-Rails.application.config.assets.precompile += %w( customers.scss bootstrap-grid.css products.scss)
+Rails.application.config.assets.precompile += %w( customers_panel.scss bootstrap-grid.css all_products_panel_customer.scss all_products_panel_merchant.scss)
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets

@@ -1,0 +1,184 @@
+// Place all the styles related to the Customers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+#navbar nav.navbar.fixed-top.navbar-light {
+background-color: #F3B3A6;
+opacity: 0.8;
+}
+
+.navbar-light .navbar-brand {
+font-size: 3.2rem;
+color: #087E8B;
+}
+
+img.d-inline-block.align-top {
+  opacity: 1.0 !important;
+}
+
+.btn {
+  opacity: 1.0 !important;
+}
+
+.btn-danger {
+  color: #EFF8E2;
+  background-color: #087E8B;
+  border-color: #087E8B;
+  font-size: 2rem;
+  padding: .3rem .6rem;
+}
+
+.btn-danger:hover {
+  background-color: #45C4C9;
+  border-color: #45C4C9;
+}
+
+.btn.details {
+  font-size: 1.5rem;
+  padding: .3rem .6rem;
+}
+
+.btn.details:hover {
+background: #45C4C9;
+border-color: #45C4C9;
+}
+
+body, html {
+  font-family: 'Calibri', serif;
+  height: 100%;
+  background: #FCF1EE;
+  margin:0;
+  padding:0;
+}
+
+.nav item {
+  margin-top: 60;
+}
+
+.container-fluid {
+  margin-top: 80px;
+}
+
+div.row.bg-title{
+  width:100%;
+}
+
+h4.page-title {
+  font-weight: bold;
+  font-size: 3.8em;
+  color:#087E8B;
+}
+
+h3.page-title {
+  font-size: 3.1em;
+  color:#087E8B;
+  padding:2px;
+}
+
+h3.box-title {
+  font-size: 2.7em;
+  color:#264653;
+  padding:2px;
+}
+
+.table {
+  margin-top: 15px;
+  font-size: 2.3em;
+  color:#264653;
+}
+
+tr {
+  padding: 35px;
+}
+
+
+.white-box {
+  margin-top: 20px;
+}
+
+.wrapper {
+  display: flex;
+}
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  background: #264653;
+  color: #EFF8E2;
+  transition: all 0.3s;
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}
+
+
+p {
+  font-size: 1.5em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #999;
+}
+
+a, a:hover, a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+
+
+#sidebar ul.components {
+  margin-top: 60px;
+  padding: 20px 0;
+  align: center;
+}
+
+#sidebar ul p {
+  color: #EFF8E2;
+  padding: 10px;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 2em;
+  display: block;
+}
+#sidebar ul li a:hover {
+  color: #EFF8E2;
+  background: #087E8B;
+}
+
+#sidebar ul li.active > a {
+  color: #EFF8E2;
+  background: #087E8B;
+  }
+
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #087E8B;
+}
+
+footer {
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:25px;
+  color:#EFF8E2;
+  font-size: 1.6em;
+  background: #087E8B
+}
+
+#page-wrapper{
+  padding-bottom:25px;
+}
+
+#container {
+   min-height:100%;
+   position:relative;
+}

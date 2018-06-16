@@ -4,6 +4,7 @@ module Merchants
 
     def index
       @products=Product.all
+      @merchant=current_merchant
     end
 
     end

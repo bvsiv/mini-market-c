@@ -110,6 +110,7 @@ tr {
   background: #264653;
   color: #EFF8E2;
   transition: all 0.3s;
+  height: -webkit-fill-available;
 }
 
 #sidebar.active {

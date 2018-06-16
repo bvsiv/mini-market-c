@@ -7,10 +7,10 @@ body, html {
 .main-section{
   background-color: #45C4C9;
   background-size:100% 100%;
-  height: -webkit-fill-available;
   margin: 0px;
   width: 100%;
 }
+
 .user-login-header,.login-image-main{
     margin-top: 15px;
 }
@@ -31,6 +31,7 @@ body, html {
   background-color:#FCF1EE;
   border-radius:5px;
   box-shadow: 0 0 5px 0 #fff;
+  margin-bottom:20px;
 }
 .user-image-section img{
   background-color: #087E8B;

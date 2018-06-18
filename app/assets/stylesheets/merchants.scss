@@ -1,3 +1,16 @@
-// Place all the styles related to the merchants controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Calibri');
+@import 'bootstrap-grid.css';
+@import 'colors.scss';
+@import 'tables.scss';
+@import 'buttons.scss';
+@import 'carts.scss';
+
+@import 'all_products_panel_merchant';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Calibri', serif;
+  }

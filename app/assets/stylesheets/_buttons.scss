@@ -1,0 +1,40 @@
+.btn {
+  opacity: 1.0 !important;
+}
+
+.btn-danger {
+  color: #EFF8E2;
+  background-color: #087E8B;
+  border-color: #087E8B;
+  font-size: 2rem;
+  padding: .3rem .6rem;
+}
+
+.btn-danger:hover {
+  background-color: #45C4C9;
+  border-color: #45C4C9;
+}
+
+.btn.details {
+  font-size: 1.5rem;
+  padding: .3rem .6rem;
+}
+
+.btn.details:hover {
+background: #45C4C9;
+border-color: #45C4C9;
+}
+
+.btn{
+  color: #EFF8E2;
+  background-color: #087E8B;
+  border-color: #087E8B;
+  font-size: 2rem;
+  padding: .3rem .6rem;
+}
+
+.btn:hover{
+  color: #EFF8E2;
+  background-color: #45C4C9;
+  border-color: #45C4C9;
+}

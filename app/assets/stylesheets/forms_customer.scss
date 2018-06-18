@@ -1,9 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Calibri');
-
-body, html {
-  font-family: 'Calibri', serif;
-  }
-
 .main-section{
   background-color: #45C4C9;
   background-size:100% 100%;
@@ -61,20 +55,6 @@ font-weight:bold;
 
 .last-part a span:hover{
 color:#45C4C9
-}
-
-.btn{
-  color: #EFF8E2;
-  background-color: #087E8B;
-  border-color: #087E8B;
-  font-size: 2rem;
-  padding: .3rem .6rem;
-}
-
-.btn:hover{
-  color: #EFF8E2;
-  background-color: #45C4C9;
-  border-color: #45C4C9;
 }
 
 .form-label{

@@ -7,5 +7,9 @@ module Customers
       @customer = current_customer
     end
 
+    def show
+      @product=Product.find(params[:id])
+    end
+
   end
 end

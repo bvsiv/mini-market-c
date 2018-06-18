@@ -46,3 +46,27 @@ Offer.create(suggested_price: 500, status: "proposed", customer_id: michael.id, 
 Offer.create(suggested_price: 2000, status: "proposed", customer_id: bonnie.id, product_id: phone.id)
 Offer.create(suggested_price: 10, status: "proposed", customer_id: bonnie.id, product_id: magazine.id)
 Offer.create(suggested_price: 200, status: "proposed", customer_id: bonnie.id, product_id: shoes.id)
+
+Offer.create(suggested_price: 100000, status: "proposed", customer_id: michael.id, product_id: guitar.id)
+Offer.create(suggested_price: 10000, status: "proposed", customer_id: michael.id, product_id: book.id)
+Offer.create(suggested_price: 5000, status: "proposed", customer_id: michael.id, product_id: backpack.id)
+
+Offer.create(suggested_price: 1000000, status: "proposed", customer_id: bonnie.id, product_id: car.id)
+Offer.create(suggested_price: 1000, status: "proposed", customer_id: bonnie.id, product_id: cd.id)
+Offer.create(suggested_price: 5000, status: "proposed", customer_id: bonnie.id, product_id: suitcase.id)
+
+Offer.create(suggested_price: 20000, status: "proposed", customer_id: michael.id, product_id: phone.id)
+Offer.create(suggested_price: 100, status: "proposed", customer_id: michael.id, product_id: magazine.id)
+Offer.create(suggested_price: 2000, status: "proposed", customer_id: michael.id, product_id: shoes.id)
+
+Offer.create(suggested_price: 1000, status: "proposed", customer_id: bonnie.id, product_id: guitar.id)
+Offer.create(suggested_price: 100, status: "proposed", customer_id: bonnie.id, product_id: book.id)
+Offer.create(suggested_price: 50, status: "proposed", customer_id: bonnie.id, product_id: backpack.id)
+
+Offer.create(suggested_price: 10000, status: "proposed", customer_id: carlos.id, product_id: car.id)
+Offer.create(suggested_price: 10, status: "proposed", customer_id: carlos.id, product_id: cd.id)
+Offer.create(suggested_price: 50, status: "proposed", customer_id: carlos.id, product_id: suitcase.id)
+
+Offer.create(suggested_price: 200, status: "proposed", customer_id: carlos.id, product_id: phone.id)
+Offer.create(suggested_price: 1, status: "proposed", customer_id: carlos.id, product_id: magazine.id)
+Offer.create(suggested_price: 20, status: "proposed", customer_id: carlos.id, product_id: shoes.id)

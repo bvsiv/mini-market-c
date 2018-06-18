@@ -21,5 +21,7 @@ Rails.application.routes.draw do
 
     get '/panel' => 'panel#index'
     get 'products' => 'products#index'
+
+    get '/products/:id' => 'products#show'
   end
 end

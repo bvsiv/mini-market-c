@@ -1,0 +1,10 @@
+<%= @product.name %>
+<%= @product.description %>
+<%= @product.merchant.name %>
+<%= @product.merchant.email %>
+
+<% @product.offers.each do |offer| %>
+  <%= offer.suggested_price %>
+<% end %>
+
+

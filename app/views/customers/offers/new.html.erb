@@ -1,0 +1,17 @@
+<div class="login">
+  <div class="container">
+    <div class="form">
+
+      <h1>new offer</h1>
+      <%= form_for(:offer, url: customers_offer_new_path) do |f| %>
+        <div class="field">
+          <%= f.label :suggested_price %><br>
+          <%= f.text_field :suggested_price %>
+        </div>
+        <div class="actions">
+          <%= f.submit "Create an offer" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

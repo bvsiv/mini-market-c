@@ -1,9 +1,11 @@
 <%= @product.name %>
 <%= @product.description %>
-<%= @product.merchant.name %>
-<%= @product.merchant.email %>
+Merchant: <%= @product.merchant.name %>
+Contact: <%= @product.merchant.email %>
 
 <% @product.offers.each do |offer| %>
-  <%= offer.suggested_price %>
-  <%= offer.customer.name %>
+  <%= number_to_currency(offer.suggested_price, unit:"zł", separator: ",", delimiter: " ", format: "%n %u") %>
+  offered by: <%= offer.customer.name %>
 <% end %>
+
+<%= link_to 'New Offer', customers_offer_new_path %>

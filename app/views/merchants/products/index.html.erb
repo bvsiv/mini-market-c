@@ -1,40 +1,23 @@
 <!doctype html>
-  <html lang="en">
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"/>
-      <%= favicon_link_tag 'minilogo3.png' %>
-      <%= stylesheet_link_tag('merchants')%>
-      <title>Mini Market</title>
-    </head>
+<html lang="en">
 
-    <body>
-      <div class="preloader">
-        <div class="cssload-speeding-wheel"></div>
-      </div>
+  <head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"/>
+    <%= favicon_link_tag 'minilogo3.png' %>
+    <%= stylesheet_link_tag('merchants')%>
+    <title>Mini Market</title>
+  </head>
 
-      <div id="container">
-        <div id="navbar">
-          <nav class="navbar fixed-top navbar-light">
-            <a class="navbar-brand" href="/">
-              <%=image_tag("minilogo3.png", size:45, class: "d-inline-block align-top", alt: "ooł") %> Mini Market</a>
-                <ul class="nav navbar-top-links navbar-right pull-right">
-                  <li>
-                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> <a  href=<%=merchants_logout_path %> target="_blank" class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Log out</a>
-                  </li>
-                </ul>
-          </nav>
-        </div>
+  <body>
+    <div class="preloader">
+      <div class="cssload-speeding-wheel"></div>
+    </div>
 
-      <div class="wrapper">
-        <nav id="sidebar">
-          <ul class="list-unstyled components">
-            <li><a href="/">Dashboard</a></li>
-            <li><a href="#">Merchant's Panel</a></li>
-            <li class="active"><a href=<%=merchants_products_path %>>Products</a></li>
-          </ul>
-        </nav>
+    <div id="container">
+
+      <%= render "layouts/navbar", logout_path: "logout", panel_name: "Merchant's", li1_class: "", li2_class: "", li3_class: "active", panel_path: "panel", products_path: "products" %>
 
       <div id="page-wrapper">
         <div class="container-fluid">
@@ -72,7 +55,9 @@
             </div>
           </div>
         </div>
-      <footer class="footer text-center"> 2018 &copy; made by Mini Market Team C </footer>
+
+      <%= render "layouts/footer" %>
+
     </div>
   </body>
 </html>

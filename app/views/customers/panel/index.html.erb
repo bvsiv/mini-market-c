@@ -17,7 +17,7 @@
 
     <div id="container">
 
-      <%= render "layouts/navbar", logout_path: "logout", panel_name: "Customer's", li1_class: "", li2_class: "active", li3_class: "", panel_path: "panel", products_path: "products" %>
+      <%= render partial: "layouts/navbar", locals: {:logout_path => "logout", :panel_name => "Customer's", :li1_class => "", :li2_class => "active", :li3_class => "", :panel_path => "panel", :products_path => "products"} %>
 
         <div id="page-wrapper">
           <div class="container-fluid">
@@ -64,7 +64,7 @@
           </div>
         </div>
 
-      <%= render "layouts/footer" %>
+      <%= render partial: "layouts/footer" %>
 
     </div>
   </body>

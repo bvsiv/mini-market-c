@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Calibri');
-@import 'bootstrap-grid.css';
-@import 'colors.scss';
-@import 'tables.scss';
-@import 'buttons.scss';
-@import 'carts.scss';
+@import 'bootstrap-grid';
+@import 'colors';
+@import 'tables';
+@import 'buttons';
+@import 'carts';
 
-@import 'panels_customer.scss';
-@import 'forms_customer.scss';
+@import 'panels_customer';
+@import 'forms_customer';
 
 *, *::before, *::after {
   box-sizing: border-box;

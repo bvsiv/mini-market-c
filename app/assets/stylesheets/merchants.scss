@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Calibri');
-@import 'bootstrap-grid.css';
-@import 'colors.scss';
-@import 'tables.scss';
-@import 'buttons.scss';
-@import 'carts.scss';
+@import 'bootstrap-grid';
+@import 'colors';
+@import 'tables';
+@import 'buttons';
+@import 'carts';
 
-@import 'all_products_panel_merchant.scss';
+@import 'all_products_panel_merchant';
 
 *, *::before, *::after {
   box-sizing: border-box;

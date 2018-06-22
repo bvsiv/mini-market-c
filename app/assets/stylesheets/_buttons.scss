@@ -1,0 +1,40 @@
+.btn {
+  opacity: 1.0 !important;
+}
+
+.btn-danger {
+  color: $yellow;
+  background-color: $dark_green;
+  border-color: $dark_green;
+  font-size: 2rem;
+  padding: .3rem .6rem;
+}
+
+.btn-danger:hover {
+  background-color: $light_green;
+  border-color: $light_green;
+}
+
+.btn.details {
+  font-size: 1.5rem;
+  padding: .3rem .6rem;
+}
+
+.btn.details:hover {
+background: $light_green;
+border-color: $light_green;
+}
+
+.btn{
+  color: $yellow;
+  background-color: $dark_green;
+  border-color: $dark_green;
+  font-size: 2rem;
+  padding: .3rem .6rem;
+}
+
+.btn:hover{
+  color: $yellow;
+  background-color: $light_green;
+  border-color: $light_green;
+}

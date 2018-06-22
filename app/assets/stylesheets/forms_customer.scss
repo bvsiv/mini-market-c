@@ -1,0 +1,64 @@
+.main-section{
+  background-color: #45C4C9;
+  background-size:100% 100%;
+  margin: 0px;
+  width: 100%;
+}
+
+.user-login-header,.login-image-main{
+    margin-top: 15px;
+}
+.user-login-header h1{
+  font-size: 60px;
+  color: $yellow;
+}
+.user-login-header p,.last-part p{
+  color: $dark_green;
+  font-size: 20px
+}
+.user-login-header span{
+  font-weight: 600;
+  font-size: 30px;
+}
+.login-image-main{
+  padding: 30px;
+  background-color: $light_peach;
+  border-radius:5px;
+  box-shadow: 0 0 5px 0 $white;
+  margin-bottom:20px;
+}
+.user-image-section img{
+  background-color: $dark_green;
+  padding:30px;
+  height:150px;
+  width:150px;
+  border-radius: 50%;
+}
+.user-login-box,.last-part{
+  padding:20px;
+}
+.user-login-box a,.user-login-box a:hover{
+  background-color: $dark_green;
+  border:1px solid $light_green;
+  width: 100%;
+  color: $white;
+  font-weight:600;
+}
+.last-part a{
+  text-decoration: none;
+  color: $dark_green;
+}
+
+.last-part a span{
+font-weight:bold;
+}
+
+.last-part a span:hover{
+color: $light_green;
+}
+
+.form-label{
+text-decoration: none;
+color: $dark_green;
+font-size:20px;
+}

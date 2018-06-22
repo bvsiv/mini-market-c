@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"/>
+    <%= favicon_link_tag 'minilogo3.png' %>
+    <%= stylesheet_link_tag('merchants')%>
+    <title>Mini Market</title>
+  </head>
+
+  <body>
+    <div class="preloader">
+      <div class="cssload-speeding-wheel"></div>
+    </div>
+
+    <div id="container">
+
+      <%= render partial: "layouts/navbar", locals: {:logout_path => "logout", :panel_name => "Merchant's", :li1_class => "", :li2_class => "", :li3_class => "active", :panel_path => "panel", :products_path => "products"} %>
+
+      <div id="page-wrapper">
+        <div class="container-fluid">
+          <div class="row bg-title">
+            <div class="col-12">
+              <h4 class="page-title">Welcome <%=@merchant.name %>!</h4>
+            </div>
+          </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="white-box">
+              <h3 class="box-title">Here you can see all products and links to your products' details</h3>
+                <div class="card-columns">
+                  <% @products.each do |product| %>
+                    <div class="card">
+                      <%=image_tag("product.png", class:"card-img-top")%>
+                      <div class="card-body">
+                        <h2 class="card-title"><%= product.name %></h2>
+                        <h2 class="card-title"><%= number_to_currency(product.offers.pluck(:suggested_price).max, unit:"zł", separator: ",", delimiter: " ", format: "%n %u")%></h2>
+                        <h3 class="card-text">Merchant: <%= product.merchant.name %></h3>
+                        <h4 class="card-text"><%= product.description %></h4>
+                        <% if product.merchant.name == @merchant.name %>
+                        <a href="#" target="_blank" class="btn details btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">See more</a>
+                        <% else %>
+                        <% end %>
+                        <br>
+                        <br>
+                      </div>
+                    </div>
+                  <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <%= render partial: "layouts/footer" %>
+
+    </div>
+  </body>
+</html>

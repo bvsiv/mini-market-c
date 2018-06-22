@@ -1,58 +1,21 @@
-// Place all the styles related to the Customers controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-@import url('https://fonts.googleapis.com/css?family=Calibri');
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
 #navbar nav.navbar.fixed-top.navbar-light {
-background-color: #F3B3A6;
+background-color: $peach;
 opacity: 0.8;
 }
 
 .navbar-light .navbar-brand {
 font-size: 3.2rem;
-color: #087E8B;
+color: $dark_green;
 }
 
 img.d-inline-block.align-top {
   opacity: 1.0 !important;
 }
 
-.btn {
-  opacity: 1.0 !important;
-}
-
-.btn-danger {
-  color: #EFF8E2;
-  background-color: #087E8B;
-  border-color: #087E8B;
-  font-size: 2rem;
-  padding: .3rem .6rem;
-}
-
-.btn-danger:hover {
-  background-color: #45C4C9;
-  border-color: #45C4C9;
-}
-
-.btn.details {
-  font-size: 1.5rem;
-  padding: .3rem .6rem;
-}
-
-.btn.details:hover {
-background: #45C4C9;
-border-color: #45C4C9;
-}
-
 body, html {
   font-family: 'Calibri', serif;
   height: 100%;
-  background: #FCF1EE;
+  background: $light_peach;
   margin:0;
   padding:0;
 }
@@ -77,26 +40,15 @@ h4.page-title {
 
 h3.page-title {
   font-size: 3.1em;
-  color:#087E8B;
+  color: $dark_green;
   padding:2px;
 }
 
 h3.box-title {
   font-size: 2.7em;
-  color:#264653;
+  color: $dark_grey;
   padding:2px;
 }
-
-.table {
-  margin-top: 15px;
-  font-size: 2.3em;
-  color:#264653;
-}
-
-tr {
-  padding: 35px;
-}
-
 
 .white-box {
   margin-top: 20px;
@@ -109,8 +61,8 @@ tr {
 #sidebar {
   min-width: 250px;
   max-width: 250px;
-  background: #264653;
-  color: #EFF8E2;
+  background: $dark_grey;
+  color: $yellow;
   transition: all 0.3s;
 }
 
@@ -118,12 +70,11 @@ tr {
   margin-left: -250px;
 }
 
-
 p {
   font-size: 1.5em;
   font-weight: 300;
   line-height: 1.7em;
-  color: #999;
+  color: $light_grey;
 }
 
 a, a:hover, a:focus {
@@ -132,8 +83,6 @@ a, a:hover, a:focus {
   transition: all 0.3s;
 }
 
-
-
 #sidebar ul.components {
   margin-top: 60px;
   padding: 20px 0;
@@ -141,7 +90,7 @@ a, a:hover, a:focus {
 }
 
 #sidebar ul p {
-  color: #EFF8E2;
+  color: $yellow;
   padding: 10px;
 }
 
@@ -151,19 +100,19 @@ a, a:hover, a:focus {
   display: block;
 }
 #sidebar ul li a:hover {
-  color: #EFF8E2;
-  background: #087E8B;
+  color: $yellow;
+  background: $dark_green;
 }
 
 #sidebar ul li.active > a {
-  color: #EFF8E2;
-  background: #087E8B;
+  color: $yellow;
+  background: $dark_green;
   }
 
 ul ul a {
   font-size: 0.9em !important;
   padding-left: 30px !important;
-  background: #087E8B;
+  background: $dark_green;
 }
 
 footer {
@@ -171,20 +120,9 @@ footer {
   bottom:0;
   width:100%;
   height:25px;
-  color:#EFF8E2;
+  color:$yellow;
   font-size: 1.6em;
-  background: #087E8B
-}
-
-.card {
-margin:5px;
-}
-
-.card-img-top{
-  width: 20rem;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  background: $dark_green;
 }
 
 #page-wrapper{
@@ -194,8 +132,4 @@ margin:5px;
 #container {
    min-height:100%;
    position:relative;
-}
-
-.card-body {
-color:#264653;
 }

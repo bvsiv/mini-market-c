@@ -1,18 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Calibri');
-@import 'bootstrap-grid.css';
-@import 'colors.scss';
-@import 'tables.scss';
-@import 'buttons.scss';
-@import 'carts.scss';
+@import 'bootstrap-grid';
+@import 'colors';
+@import 'tables';
+@import 'buttons';
+@import 'carts';
 
-@import 'customers_panel.scss';
+@import 'panels_customer';
 @import 'forms_customer';
-@import 'signup_customer';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 body, html {
   font-family: 'Calibri', serif;
   }
-
-
-
-

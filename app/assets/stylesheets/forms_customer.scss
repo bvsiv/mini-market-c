@@ -10,10 +10,10 @@
 }
 .user-login-header h1{
   font-size: 60px;
-  color:#EFF8E2;
+  color: $yellow;
 }
 .user-login-header p,.last-part p{
-  color:#087E8B;
+  color: $dark_green;
   font-size: 20px
 }
 .user-login-header span{
@@ -22,13 +22,13 @@
 }
 .login-image-main{
   padding: 30px;
-  background-color:#FCF1EE;
+  background-color: $light_peach;
   border-radius:5px;
-  box-shadow: 0 0 5px 0 #fff;
+  box-shadow: 0 0 5px 0 $white;
   margin-bottom:20px;
 }
 .user-image-section img{
-  background-color: #087E8B;
+  background-color: $dark_green;
   padding:30px;
   height:150px;
   width:150px;
@@ -38,15 +38,15 @@
   padding:20px;
 }
 .user-login-box a,.user-login-box a:hover{
-  background-color: #087E8B;
-  border:1px solid #45C4C9;
+  background-color: $dark_green;
+  border:1px solid $light_green;
   width: 100%;
-  color:#fff;
+  color: $white;
   font-weight:600;
 }
 .last-part a{
   text-decoration: none;
-  color:#087E8B;
+  color: $dark_green;
 }
 
 .last-part a span{
@@ -54,11 +54,11 @@ font-weight:bold;
 }
 
 .last-part a span:hover{
-color:#45C4C9
+color: $light_green;
 }
 
 .form-label{
 text-decoration: none;
-color:#087E8B;
+color: $dark_green;
 font-size:20px;
 }

@@ -1,0 +1,20 @@
+<div id="navbar">
+        <nav class="navbar fixed-top navbar-light">
+          <a class="navbar-brand" href="/">
+            <%=image_tag("minilogo3.png", size:45, class: "d-inline-block align-top", alt: "ooł") %> Mini Market</a>
+          <ul class="nav navbar-top-links navbar-right pull-right">
+            <li>
+              <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> <a href="<%= logout_path %>" target="_blank" class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Log out</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="wrapper">
+        <nav id="sidebar">
+          <ul class="list-unstyled components">
+            <li class="<%= li1_class %>"><a href="/">Dashboard</a></li>
+            <li class="<%= li2_class %>"><a href="<%= panel_path %>"><%= panel_name %> Panel</a></li>
+            <li class="<%= li3_class %>"><a href="<%= products_path %>">Products</a></li>
+          </ul>
+        </nav>

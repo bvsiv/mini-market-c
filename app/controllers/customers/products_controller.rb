@@ -9,6 +9,7 @@ module Customers
 
     def show
       @product=Product.find(params[:id])
+      @customer = current_customer
     end
 
   end

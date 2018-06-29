@@ -17,7 +17,7 @@
 
     <div id="container">
 
-      <%= render partial: "layouts/navbar", locals: {:logout_path => "logout", :panel_name => "Customer's", :li1_class => "", :li2_class => "active", :li3_class => "", :panel_path => "panel", :products_path => "products"} %>
+      <%= render partial: "layouts/navbar", locals: {:logout_path => customers_logout_path, :panel_name => "Customer's Panel", :li1_class => "", :li2_class => "active", :li3_class => "", :panel_path => customers_panel_path, :products_path => customers_products_path} %>
 
         <div id="page-wrapper">
           <div class="container-fluid">
@@ -52,7 +52,7 @@
                           <td><%= o.status %></td>
                           <td><%= o.updated_at.strftime("%d.%m.%Y %H:%M:%S") %></td>
                           <td><%= number_to_currency(o.suggested_price, unit:"zł", separator: ",", delimiter: " ", format: "%n %u") %></td>
-                          <td><a href="#" target="_blank" class="btn details btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">See more</a></td>
+                          <td><%= link_to 'See more', customers_product_details_path(:id => o.product.id), class: "btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light" %></td>
                         </tr>
                       <% end %>
                       </tbody>

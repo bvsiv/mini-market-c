@@ -17,7 +17,7 @@
 
     <div id="container">
 
-      <%= render partial: "layouts/navbar", locals: {:logout_path => "logout", :panel_name => "Merchant's", :li1_class => "", :li2_class => "", :li3_class => "active", :panel_path => "panel", :products_path => "products"} %>
+      <%= render partial: "layouts/navbar", locals: {:logout_path => customers_logout_path, :panel_name => "Merchant's Panel", :li1_class => "", :li2_class => "", :li3_class => "active", :panel_path => "#", :products_path => merchants_products_path} %>
 
       <div id="page-wrapper">
         <div class="container-fluid">
@@ -41,8 +41,9 @@
                         <h3 class="card-text">Merchant: <%= product.merchant.name %></h3>
                         <h4 class="card-text"><%= product.description %></h4>
                         <% if product.merchant.name == @merchant.name %>
-                        <a href="#" target="_blank" class="btn details btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">See more</a>
+                        <%= link_to 'See more', "#", class: "btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light" %><br>
                         <% else %>
+                        <br>
                         <% end %>
                         <br>
                         <br>

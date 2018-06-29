@@ -17,7 +17,7 @@
 
     <div id="container">
 
-    <%= render partial: "layouts/navbar", locals: {:logout_path => "logout", :panel_name => "Customer's", :li1_class => "", :li2_class => "", :li3_class => "", :panel_path => "panel", :products_path => "products"} %>
+    <%= render partial: "layouts/navbar", locals: {:logout_path => customers_logout_path, :panel_name => "Customer's Panel", :li1_class => "", :li2_class => "", :li3_class => "", :panel_path => customers_panel_path, :products_path => customers_products_path} %>
 
       <div id="page-wrapper">
         <div class="container-fluid">
@@ -39,13 +39,13 @@
                         <h3 class="card-text">Contact: <%= @product.merchant.email %></h3>
                         <h4 class="card-text"><%= @product.description %></h4><br>
                         <br>
+                        <%= link_to 'New offer', customers_products_new_offer_path(:id =>@product.id), class: "btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light", target: "blank" %><br>
+                        <br><br>
                         <h2 class="card-title">Offers for this product:</h2>
                         <% @product.offers.each do |offer| %>
                         <h2 class="card-text"><%= number_to_currency(offer.suggested_price, unit:"zł", separator: ",", delimiter: " ", format: "%n %u") %></h2>
                         <h3 class="card-text">offered by: <%= offer.customer.name %></h3>
                         <% end %>
-                        <a href="<%=customers_products_new_offer_path(:id =>@product.id)%>" target="_blank" class="btn details btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">New Offer</a><br>
-                        <br>
                       </div>
                     </div>
               </div>

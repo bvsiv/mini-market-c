@@ -22,9 +22,9 @@ Rails.application.routes.draw do
     get '/panel' => 'panel#index'
     get 'products' => 'products#index'
 
-    get '/products/:id' => 'products#show'
+    get '/products/:id' => 'products#show', as: 'product_details'
 
-    get 'offer/new'  => 'offers#new'
-    post 'offer/new' => 'offers#create'
+    get '/products/:id/offer/new'  => 'offers#new', as: 'products_new_offer'
+    post '/products/:id/offer/new' => 'offers#create'
   end
 end

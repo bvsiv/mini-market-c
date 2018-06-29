@@ -1,13 +1,13 @@
 <div class="login">
   <div class="container">
     <div class="form">
-
-      <h1>new offer</h1>
-      <%= form_for(:offer, url: customers_offer_new_path) do |f| %>
+      <h1>dear <%= @customer.name%> here you can make a new offer for <%= @product.name%> from <%= @product.merchant.name%></h1>
+      <p> Last offers is <%= number_to_currency(@product.offers.pluck(:suggested_price).max, unit:"zł", separator: ",", delimiter: " ", format: "%n %u")%>. Please, enter a higher price</p>
+      <%= form_for(:offer, url: customers_products_new_offer_path) do |f| %>
         <div class="field">
           <%= f.label :suggested_price %><br>
           <%= f.text_field :suggested_price %>
-        </div>
+        </div><br>
         <div class="actions">
           <%= f.submit "Create an offer" %>
         </div>

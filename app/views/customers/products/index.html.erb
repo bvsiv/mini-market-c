@@ -40,7 +40,7 @@
                         <h2 class="card-title"><%= number_to_currency(product.offers.pluck(:suggested_price).max, unit:"zł", separator: ",", delimiter: " ", format: "%n %u")%></h2>
                         <h3 class="card-text">Merchant: <%= product.merchant.name %></h3>
                         <h4 class="card-text"><%= product.description %></h4>
-                        <a href="#" target="_blank" class="btn details btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">See more</a><br>
+                        <a href="<%=customers_product_details_path(:id => product.id)%>" target="_blank" class="btn details btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">See more</a><br>
                         <br>
                       </div>
                     </div>

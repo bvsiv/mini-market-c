@@ -44,7 +44,7 @@
                         <h2 class="card-text"><%= number_to_currency(offer.suggested_price, unit:"zł", separator: ",", delimiter: " ", format: "%n %u") %></h2>
                         <h3 class="card-text">offered by: <%= offer.customer.name %></h3>
                         <% end %>
-                        <a href="<%=customers_products_new_offer_path(:id => product.id)%>" target="_blank" class="btn details btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">New Offer</a><br>
+                        <a href="<%=customers_products_new_offer_path(:id =>@product.id)%>" target="_blank" class="btn details btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">New Offer</a><br>
                         <br>
                       </div>
                     </div>

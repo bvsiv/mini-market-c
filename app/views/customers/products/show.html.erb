@@ -41,11 +41,31 @@
                   <br>
                   <%= link_to 'New offer', customers_products_new_offer_path(:id =>@product.id), class: "btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light", target: "blank" %><br>
                   <br><br>
-                  <h2 class="card-title">Offers for this product:</h2>
-                  <% @product.offers.each do |offer| %>
-                  <h2 class="card-text"><%= number_to_currency(offer.suggested_price, unit:"zł", separator: ",", delimiter: " ", format: "%n %u") %> offered by: <%= offer.customer.name %></h2>
-                  <% end %>
                 </div>
+              </div>
+              <br>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Suggested price</th>
+                      <th>Customer</th>
+                      <th>Status</th>
+                      <th>Date</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <h3 class="box-title">Offers for this product:</h3>
+                    <% @product.offers.each do |offer| %>
+                    <tr>
+                      <td><%= number_to_currency(offer.suggested_price, unit:"zł", separator: ",", delimiter: " ", format: "%n %u") %></td>
+                      <td><%= offer.customer.name %></td>
+                      <td><%= offer.status %></td>
+                      <td><%= offer.updated_at.strftime("%d.%m.%Y %H:%M:%S") %></td>
+                    </tr>
+                    <% end %>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>

@@ -1,29 +1,29 @@
 <!doctype html>
-  <html lang="en">
+<html lang="en">
 
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"/>
-      <%= favicon_link_tag 'minilogo3.png' %>
-      <%= stylesheet_link_tag('customers')%>
-      <title>Mini Market</title>
-    </head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"/>
+    <%= favicon_link_tag 'minilogo3.png' %>
+    <%= stylesheet_link_tag('customers')%>
+    <title>Mini Market</title>
+  </head>
 
     <body>
       <div class="preloader">
         <div class="cssload-speeding-wheel"></div>
       </div>
 
-    <div id="container">
+      <div id="container">
 
-    <%= render partial: "layouts/navbar", locals: {:logout_path => customers_logout_path, :panel_name => "Customer's Panel", :li1_class => "", :li2_class => "", :li3_class => "", :panel_path => customers_panel_path, :products_path => customers_products_path} %>
+      <%= render partial: "layouts/navbar", locals: {:logout_path => customers_logout_path, :panel_name => "Customer's Panel", :li1_class => "", :li2_class => "", :li3_class => "", :panel_path => customers_panel_path, :products_path => customers_products_path} %>
 
-      <div id="page-wrapper">
-        <div class="container-fluid">
-          <div class="col-12">
-            <h4 class="page-title">Dear <%=@customer.name %>!</h4>
-          </div>
+        <div id="page-wrapper">
+          <div class="container-fluid">
+            <div class="col-12">
+              <h4 class="page-title">Dear <%=@customer.name %>!</h4>
+            </div>
 
           <div class="container main-section offer">
             <h3 class="box-title offer text-center">Here you can make a new offer for <span><%= @product.name%></span> from <span><%= @product.merchant.name%></span>. Last offer is <span><%= number_to_currency(@product.offers.pluck(:suggested_price).max, unit:"zł", separator: ",", delimiter: " ", format: "%n %u")%>.</span></h3>
@@ -45,7 +45,7 @@
         </div>
       </div>
 
-    <%= render partial: "layouts/footer" %>
+      <%= render partial: "layouts/footer" %>
 
     </div>
   </body>

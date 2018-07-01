@@ -1,19 +1,19 @@
 <!doctype html>
-  <html lang="en">
+<html lang="en">
 
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"/>
-      <%= favicon_link_tag 'minilogo3.png' %>
-      <%= stylesheet_link_tag('customers')%>
-      <title>Mini Market</title>
-    </head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"/>
+    <%= favicon_link_tag 'minilogo3.png' %>
+    <%= stylesheet_link_tag('customers')%>
+    <title>Mini Market</title>
+  </head>
 
-    <body>
-      <div class="preloader">
-        <div class="cssload-speeding-wheel"></div>
-      </div>
+  <body>
+    <div class="preloader">
+      <div class="cssload-speeding-wheel"></div>
+    </div>
 
     <div id="container">
 
@@ -31,31 +31,31 @@
           <div class="col-12">
             <div class="white-box">
               <h3 class="box-title">Here you can see product's details</h3>
-                    <div class="card">
-                      <%=image_tag("product.png", class:"card-img-top")%>
-                      <div class="card-body">
-                        <h2 class="card-title"><%= @product.name %></h2>
-                        <h3 class="card-text">Merchant: <%= @product.merchant.name %></h3>
-                        <h3 class="card-text">Contact: <%= @product.merchant.email %></h3>
-                        <h4 class="card-text"><%= @product.description %></h4><br>
-                        <br>
-                        <%= link_to 'New offer', customers_products_new_offer_path(:id =>@product.id), class: "btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light", target: "blank" %><br>
-                        <br><br>
-                        <h2 class="card-title">Offers for this product:</h2>
-                        <% @product.offers.each do |offer| %>
-                        <h2 class="card-text"><%= number_to_currency(offer.suggested_price, unit:"zł", separator: ",", delimiter: " ", format: "%n %u") %> offered by: <%= offer.customer.name %></h2>
-                        <% end %>
-                      </div>
-                    </div>
+              <div class="card">
+                <%=image_tag("product.png", class:"card-img-top")%>
+                <div class="card-body">
+                  <h2 class="card-title"><%= @product.name %></h2>
+                  <h3 class="card-text">Merchant: <%= @product.merchant.name %></h3>
+                  <h3 class="card-text">Contact: <%= @product.merchant.email %></h3>
+                  <h4 class="card-text"><%= @product.description %></h4><br>
+                  <br>
+                  <%= link_to 'New offer', customers_products_new_offer_path(:id =>@product.id), class: "btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light", target: "blank" %><br>
+                  <br><br>
+                  <h2 class="card-title">Offers for this product:</h2>
+                  <% @product.offers.each do |offer| %>
+                  <h2 class="card-text"><%= number_to_currency(offer.suggested_price, unit:"zł", separator: ",", delimiter: " ", format: "%n %u") %> offered by: <%= offer.customer.name %></h2>
+                  <% end %>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
     <%= render partial: "layouts/footer" %>
 
-  </div>
+    </div>
   </body>
 </html>
 

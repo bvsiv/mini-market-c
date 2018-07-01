@@ -1,17 +1,52 @@
-<div class="login">
-  <div class="container">
-    <div class="form">
-      <h1>dear <%= @customer.name%> here you can make a new offer for <%= @product.name%> from <%= @product.merchant.name%></h1>
-      <p> Last offer is <%= number_to_currency(@product.offers.pluck(:suggested_price).max, unit:"zł", separator: ",", delimiter: " ", format: "%n %u")%>. Please, enter a higher price</p>
-      <%= form_for :offer do |f| %>
-        <div class="field">
-          <%= f.label :suggested_price %><br>
-          <%= f.number_field :suggested_price, precision: 2, step: 0.01, min: @product.offers.pluck(:suggested_price).max+0.01 %> zł
-        </div><br>
-        <div class="actions">
-          <%= f.submit "Create an offer" %>
+<!doctype html>
+  <html lang="en">
+
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"/>
+      <%= favicon_link_tag 'minilogo3.png' %>
+      <%= stylesheet_link_tag('customers')%>
+      <title>Mini Market</title>
+    </head>
+
+    <body>
+      <div class="preloader">
+        <div class="cssload-speeding-wheel"></div>
+      </div>
+
+    <div id="container">
+
+    <%= render partial: "layouts/navbar", locals: {:logout_path => customers_logout_path, :panel_name => "Customer's Panel", :li1_class => "", :li2_class => "", :li3_class => "", :panel_path => customers_panel_path, :products_path => customers_products_path} %>
+
+      <div id="page-wrapper">
+        <div class="container-fluid">
+          <div class="col-12">
+            <h4 class="page-title">Dear <%=@customer.name %>!</h4>
+          </div>
+
+          <div class="container main-section offer">
+            <h3 class="box-title offer text-center">Here you can make a new offer for <span><%= @product.name%></span> from <span><%= @product.merchant.name%></span>. Last offer is <span><%= number_to_currency(@product.offers.pluck(:suggested_price).max, unit:"zł", separator: ",", delimiter: " ", format: "%n %u")%>.</span></h3>
+            <h4 class="box-title offer text-center">Please, enter a higher price or come back to <span><%= link_to "Product's details", customers_product_details_path(:id => @product.id) %></span></h4>
+            <div class="row">
+              <div class="col-md-4 col-sm-8 col-xs-12 col-md-offset-4 col-sm-offset-2 login-image-main user-login-box text-center">
+                <%= form_for :offer do |f| %>
+                <div class="form-group">
+                  <%= f.label :suggested_price, class: "form-label offer" %><br>
+                  <%= f.number_field :suggested_price, precision: 2, step: 0.01, min: @product.offers.pluck(:suggested_price).max+0.01, class: "form-control offer" %> <h2 class="currency">zł</h2>
+                </div><br>
+                <div class="actions">
+                  <%= f.submit "Create an offer", class: "btn btn-defualt" %>
+                </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
         </div>
-      <% end %>
+      </div>
+
+    <%= render partial: "layouts/footer" %>
+
     </div>
-  </div>
-</div>
+  </body>
+</html>

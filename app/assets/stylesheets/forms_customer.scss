@@ -5,8 +5,14 @@
   width: 100%;
 }
 
+.main-section.offer{
+  margin: 20px;
+  border-radius:5px;
+  padding: 50px;
+}
+
 .user-login-header,.login-image-main{
-    margin-top: 15px;
+  margin-top: 15px;
 }
 .user-login-header h1{
   font-size: 60px;
@@ -50,15 +56,41 @@
 }
 
 .last-part a span{
-font-weight:bold;
+  font-weight:bold;
 }
 
 .last-part a span:hover{
-color: $light_green;
+  color: $light_green;
 }
 
 .form-label{
-text-decoration: none;
-color: $dark_green;
-font-size:20px;
+  text-decoration: none;
+  color: $dark_green;
+  font-size:20px;
+}
+
+.form-label.offer{
+  font-size:2.5rem;
+}
+
+.form-control.offer {
+  font-size: 1.7rem;
+}
+
+h2.currency {
+  text-decoration: none;
+  color: $dark_green;
+  font-size:2.5rem;
+}
+
+h3.box-title.offer span{
+  font-weight: bold;
+}
+
+h4.box-title.offer span{
+  font-weight: bold;
+}
+
+h4.box-title.offer span:hover{
+  color: $yellow;
 }

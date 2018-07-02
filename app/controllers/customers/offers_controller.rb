@@ -1,16 +1,13 @@
 module Customers
   class OffersController < ApplicationController
    before_action :require_customer, only: [:new, :create]
+   before_action :set_attributes, only: [:new, :create]
 
     def new
       @offer = Offer.new
-      @customer = current_customer
-      @product=Product.find(params[:id])
     end
 
     def create
-      @customer = current_customer
-      @product=Product.find(params[:id])
 
       @offer = Offer.new(offer_params)
       if @offer.save
@@ -25,5 +22,11 @@ module Customers
       def offer_params
         params.require(:offer).permit(:suggested_price).merge(status: "proposed", customer_id: current_customer.id, product_id: @product.id)
       end
+
+      def set_attributes
+        @customer = current_customer
+        @product = Product.find(params[:id])
+      end
+
   end
 end

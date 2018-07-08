@@ -15,7 +15,7 @@ module Merchants
         redirect_to merchants_root_path
       else
         flash[:error] = 'Invalid email/password combination'
-        redirect_to login_path
+        redirect_to merchants_login_path
       end
     end
 
